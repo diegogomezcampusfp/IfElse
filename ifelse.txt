@@ -1,0 +1,26 @@
+CREAMOS UN PAQUETE EL CUAL SE LLAME paquete1 (puedes usar el paquete que quieras, siempre que cambies el nombre del mismo para que coincida con el tuyo)
+COPIAMOS EL SIGUIENTE CÓDIGO EN NUESTRA CLASE MAIN
+
+package paquete1;
+//Para poder utilizar JOptionPane, importamos la siguiente librería:
+import javax.swing.JOptionPane;
+
+public class IfElse {
+
+	public static void main(String[] args) {
+		//En este caso creo dos variables, una la cual almacena (número) y otra la cual se usa como comparación (dato).
+		int numero, dato = 9;
+		//Al utilizar Integer,parseInt, convertimos una cadena de texto a un número entero, y con JOptionPane.showInputDialog mostramos un texto en el cual podrémos 
+		//escribir nuestra respuesta sin la necesidad de utilizar un Scanner.
+		numero = Integer.parseInt(JOptionPane.showInputDialog("Escribe un número: "));
+		//Con id empezamos la comparación, es decir, si el número que escribimos (el cual se almacena en número) es igual que el dato (el cual es 9) será correcto.
+		if (numero == dato) {
+			//En este caso, JOptionPane va acompañado de showMessageDialog, ya que queremos mostrar un mensaje sin dar la posibilidad de escribir.
+			JOptionPane.showMessageDialog(null,"El número es correcto");
+		}
+		//Si el número que ingresamos no es el que nosotros asignamos a dato (en este caso 9) nos dirá que es incorrecto.
+		else {
+			JOptionPane.showMessageDialog(null,"El número es incorrecto");
+		}
+	}
+}
